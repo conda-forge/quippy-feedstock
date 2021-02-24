@@ -10,3 +10,4 @@ make config
 make
 make test
 make install-quippy
+cp libquip.a ${PREFIX}/lib
