@@ -10,3 +10,4 @@ make config
 make
 make test
 make install-quippy
+cp ${SRC_DIR}/build/${QUIP_ARCH}/libquip.a ${PREFIX}/lib
