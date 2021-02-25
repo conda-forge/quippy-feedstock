@@ -14,7 +14,7 @@ source:
     - quippy.patch  # use the f90wrap package from conda-forge 
 
 build:
-  number: 4
+  number: 3
   skip: true  # [win]
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
     - {{ compiler('fortran') }}
     - make
     - libgomp  # [linux]
+    - llvm-openmp  # [osx]
   host:
     - python
     - setuptools
