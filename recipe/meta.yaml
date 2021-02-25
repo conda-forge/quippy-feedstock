@@ -14,8 +14,8 @@ source:
     - quippy.patch  # use the f90wrap package from conda-forge 
 
 build:
-  number: 2
-  skip: true  # [not linux]
+  number: 3
+  skip: true  # [win]
 
 requirements:
   build:
