@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/libAtoms/QUIP/archive/public.tar.gz
-  sha256: 4fe533a0691ff965730c22e8e7ca91a0045c11eb2ba60eaacbb251eb1433e24e
+  sha256: 738a99b03026e3dd3c0b8a031354a692cc541e1e5ed1a485d83ad455ca74ebab
   patches:
     - options.patch  # configure quip by patching the makefile rather than using the interactive configuration 
     - fox.patch  # use the fox package from conda-forge
