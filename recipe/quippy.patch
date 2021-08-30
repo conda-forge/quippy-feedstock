@@ -1,17 +1,17 @@
-From 03e3451527852324ab5335d996c1c488434951c3 Mon Sep 17 00:00:00 2001
+From 898f35845504e81fbf2c420ff6ab7deea8b9684a Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Sun, 21 Feb 2021 15:36:25 +0100
+Date: Mon, 30 Aug 2021 17:16:24 -0600
 Subject: [PATCH] Update Makefile
 
 ---
- quippy/Makefile | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ quippy/Makefile | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
 
 diff --git a/quippy/Makefile b/quippy/Makefile
-index 34f4481f8..31c565c02 100644
+index 34f4481f8..3dfa61706 100644
 --- a/quippy/Makefile
 +++ b/quippy/Makefile
-@@ -74,7 +74,7 @@ F2PY_LINK_ARGS = $(shell ${PYTHON} -c 'import sys; print(" ".join([arg for arg i
+@@ -74,14 +74,11 @@ F2PY_LINK_ARGS = $(shell ${PYTHON} -c 'import sys; print(" ".join([arg for arg i
  
  
  #################################
@@ -20,3 +20,10 @@ index 34f4481f8..31c565c02 100644
  
  
  all: build
+ 
+-f90wrap:
+-	${PIP} install "f90wrap>=0.2.6"
+-
+ clean:
+ 	rm -f _quippy${EXT_SUFFIX} ${F90WRAP_FILES} ${WRAP_FPP_FILES}
+ 	rm -f f90wrap_*.o
