@@ -1,29 +1,22 @@
-From 898f35845504e81fbf2c420ff6ab7deea8b9684a Mon Sep 17 00:00:00 2001
+From 288c4c5854dccd89d8fdc8718fa662f9ee92754e Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Mon, 30 Aug 2021 17:16:24 -0600
+Date: Mon, 30 Aug 2021 17:45:35 -0600
 Subject: [PATCH] Update Makefile
 
 ---
- quippy/Makefile | 5 +----
- 1 file changed, 1 insertion(+), 4 deletions(-)
+ quippy/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/quippy/Makefile b/quippy/Makefile
-index 34f4481f8..3dfa61706 100644
+index 34f4481f8..4a8eef662 100644
 --- a/quippy/Makefile
 +++ b/quippy/Makefile
-@@ -74,14 +74,11 @@ F2PY_LINK_ARGS = $(shell ${PYTHON} -c 'import sys; print(" ".join([arg for arg i
+@@ -113,7 +113,7 @@ quippy/_quippy${EXT_SUFFIX} ${F90WRAP_OBJS}: ${F90WRAP_FILES}
+ 		-L. -lquip_nostub ${F2PY_LINK_ARGS} --f90flags="${QUIPPY_F90FLAGS}"
+ 	mv _quippy${EXT_SUFFIX} quippy/
  
+-build: f90wrap quippy/_quippy${EXT_SUFFIX} ${QUIPPY_SRC_DIR}/quippy/*.py
++build: quippy/_quippy${EXT_SUFFIX} ${QUIPPY_SRC_DIR}/quippy/*.py
+ 	${QUIP_ROOT}/bin/gitversion --hash-only > VERSION
+ 	cp -r ${QUIPPY_SRC_DIR}/quippy/*.py quippy
  
- #################################
--.PHONY: all build install clean f90wrap
-+.PHONY: all build install clean
- 
- 
- all: build
- 
--f90wrap:
--	${PIP} install "f90wrap>=0.2.6"
--
- clean:
- 	rm -f _quippy${EXT_SUFFIX} ${F90WRAP_FILES} ${WRAP_FPP_FILES}
- 	rm -f f90wrap_*.o
