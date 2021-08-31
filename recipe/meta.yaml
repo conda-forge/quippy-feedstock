@@ -12,6 +12,7 @@ source:
     - options.patch  # configure quip by patching the makefile rather than using the interactive configuration 
     - fox.patch  # use the fox package from conda-forge
     - quippy.patch  # use the f90wrap package from conda-forge
+    - setup.patch  # add openmp support
 
 build:
   number: 3
