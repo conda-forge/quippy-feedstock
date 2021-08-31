@@ -25,6 +25,7 @@ requirements:
     - make
     - libgomp  # [linux]
   host:
+    - pip
     - python
     - setuptools
     - ase
