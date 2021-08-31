@@ -1,17 +1,17 @@
-From 288c4c5854dccd89d8fdc8718fa662f9ee92754e Mon Sep 17 00:00:00 2001
+From 0785f6bf77d264ba2842cb26e184622d8e9ad8c4 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Mon, 30 Aug 2021 17:45:35 -0600
+Date: Mon, 30 Aug 2021 18:15:45 -0600
 Subject: [PATCH] Update Makefile
 
 ---
- quippy/Makefile | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ quippy/Makefile | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
 
 diff --git a/quippy/Makefile b/quippy/Makefile
-index 34f4481f8..4a8eef662 100644
+index 34f4481f8..3f79b6265 100644
 --- a/quippy/Makefile
 +++ b/quippy/Makefile
-@@ -113,7 +113,7 @@ quippy/_quippy${EXT_SUFFIX} ${F90WRAP_OBJS}: ${F90WRAP_FILES}
+@@ -113,11 +113,9 @@ quippy/_quippy${EXT_SUFFIX} ${F90WRAP_OBJS}: ${F90WRAP_FILES}
  		-L. -lquip_nostub ${F2PY_LINK_ARGS} --f90flags="${QUIPPY_F90FLAGS}"
  	mv _quippy${EXT_SUFFIX} quippy/
  
@@ -20,3 +20,8 @@ index 34f4481f8..4a8eef662 100644
  	${QUIP_ROOT}/bin/gitversion --hash-only > VERSION
  	cp -r ${QUIPPY_SRC_DIR}/quippy/*.py quippy
  
+ install: build
+-	cp ../../README.md ../../quippy/setup.py .
+-	cp ${PROGRAMS} quippy/
+-	${PIP} install ${QUIPPY_INSTALL_OPTS} .
++	${PYTHON} ../../quippy/setup.py install ${QUIPPY_INSTALL_OPTS}
