@@ -1,6 +1,6 @@
-From 288c4c5854dccd89d8fdc8718fa662f9ee92754e Mon Sep 17 00:00:00 2001
+From 86b019d52f51a7acd6bca80e055e7944b69aa748 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Mon, 30 Aug 2021 17:45:35 -0600
+Date: Mon, 29 Nov 2021 15:33:30 -0700
 Subject: [PATCH] Update Makefile
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Update Makefile
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/quippy/Makefile b/quippy/Makefile
-index 34f4481f8..4a8eef662 100644
+index f9fdb15f9..3240893b6 100644
 --- a/quippy/Makefile
 +++ b/quippy/Makefile
 @@ -113,7 +113,7 @@ quippy/_quippy${EXT_SUFFIX} ${F90WRAP_OBJS}: ${F90WRAP_FILES}

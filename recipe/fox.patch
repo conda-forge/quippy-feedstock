@@ -1,6 +1,6 @@
-From 0bad3489687f148badc624fa1dd65c1f0c2bb1f9 Mon Sep 17 00:00:00 2001
+From 5b336c8df1be88359b9fc08c32180175e5284659 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Sun, 21 Feb 2021 11:54:05 +0100
+Date: Mon, 29 Nov 2021 15:38:02 -0700
 Subject: [PATCH] Update Makefile
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH] Update Makefile
  1 file changed, 4 insertions(+), 17 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 85baa2eee..57029c405 100644
+index cb105747d..8e09ffaf9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -111,8 +111,8 @@ $(info Using QUIP_ARCH=${QUIP_ARCH}, MODULES=${MODULES}, QUIP_ROOT=${QUIP_ROOT})
