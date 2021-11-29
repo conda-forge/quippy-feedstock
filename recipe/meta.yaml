@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/libAtoms/QUIP/archive/public.tar.gz
+  url: https://github.com/libAtoms/QUIP/archive/ccc8629e7f8713aa7dc068811b05a97243631f5c.tar.gz
   sha256: 4fe533a0691ff965730c22e8e7ca91a0045c11eb2ba60eaacbb251eb1433e24e
   patches:
     - options.patch  # configure quip by patching the makefile rather than using the interactive configuration 
