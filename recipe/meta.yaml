@@ -7,14 +7,15 @@ package:
 
 source:
   url: https://github.com/libAtoms/QUIP/archive/public.tar.gz
-  sha256: 4fe533a0691ff965730c22e8e7ca91a0045c11eb2ba60eaacbb251eb1433e24e
+  sha256: fcebcba71f6d73ca0dfa14353fb11949cf0b0aa2daf0563baf7dc7708d1b4eb6
   patches:
     - options.patch  # configure quip by patching the makefile rather than using the interactive configuration 
     - fox.patch  # use the fox package from conda-forge
-    - quippy.patch  # use the f90wrap package from conda-forge 
+    - quippy.patch  # use the f90wrap package from conda-forge
+    - setup.patch  # add openmp support
 
 build:
-  number: 3
+  number: 4
   skip: true  # [not linux]
 
 requirements:
