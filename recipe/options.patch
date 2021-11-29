@@ -4,8 +4,8 @@ Date: Mon, 29 Nov 2021 16:01:59 -0700
 Subject: [PATCH] Update Makefile.linux_x86_64_gfortran
 
 ---
- arch/Makefile.linux_x86_64_gfortran | 47 +++++++++++++++++++++--------
- 1 file changed, 35 insertions(+), 12 deletions(-)
+ arch/Makefile.linux_x86_64_gfortran | 48 ++++++++++++++++++++++--------
+ 1 file changed, 36 insertions(+), 12 deletions(-)
 
 diff --git a/arch/Makefile.linux_x86_64_gfortran b/arch/Makefile.linux_x86_64_gfortran
 index b871e1f00..6a3340a45 100644
@@ -82,3 +82,4 @@ index b871e1f00..6a3340a45 100644
 +HAVE_CGAL=0
 +HAVE_METIS=0
 +HAVE_LMTO_TBE=0
++HAVE_SCALAPACK=0
