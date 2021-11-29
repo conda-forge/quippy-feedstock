@@ -15,7 +15,7 @@ source:
     - setup.patch  # add openmp support
 
 build:
-  number: 4
+  number: 5
   skip: true  # [not linux]
 
 requirements:
