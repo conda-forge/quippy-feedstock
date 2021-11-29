@@ -41,7 +41,7 @@ index b871e1f00..6a3340a45 100644
  
  AR_ADD = src
  
-@@ -56,11 +52,38 @@ ATOMEYE_LIBS = -L/usr/lib -Wl,-Bstatic  -lm \
+@@ -56,11 +52,39 @@ ATOMEYE_LIBS = -L/usr/lib -Wl,-Bstatic  -lm \
     -llapack -lblas -Wl,-Bdynamic
  
  QUIPPY_FCOMPILER = gnu95
