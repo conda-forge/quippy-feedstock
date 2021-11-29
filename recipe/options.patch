@@ -33,11 +33,11 @@ index f0921732b..ececd6e9c 100644
  DEFINES += -DGETARG_F2003 -DGETENV_F2003 -DGFORTRAN -DFORTRAN_UNDERSCORE
 -F95FLAGS += -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC
 -F77FLAGS += -x f77-cpp-input -fno-second-underscore -fPIC
-+F95FLAGS += $(FFLAGS) -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC
-+F77FLAGS += $(FFLAGS) -x f77-cpp-input -fno-second-underscore -fPIC
++F95FLAGS += $(FFLAGS) -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC -fopenmp
++F77FLAGS += $(FFLAGS) -x f77-cpp-input -fno-second-underscore -fPIC -fopenmp
  CFLAGS += -fPIC 
 -CPLUSPLUSFLAGS += -fPIC 
-+CPLUSPLUSFLAGS += $(CPPFLAGS) -fPIC 
++CPLUSPLUSFLAGS += $(CPPFLAGS) -fPIC -fopenmp
  
  AR_ADD = src
  
@@ -45,8 +45,8 @@ index f0921732b..ececd6e9c 100644
     -llapack -lblas -Wl,-Bdynamic
  
  QUIPPY_FCOMPILER = gnu95
--QUIPPY_F90FLAGS = -ffree-line-length-none
-+QUIPPY_F90FLAGS = $(FFLAGS) -ffree-line-length-none
+-QUIPPY_F90FLAGS = -ffree-line-length-none -fPIC
++QUIPPY_F90FLAGS = $(FFLAGS) -ffree-line-length-none -fPIC -fopenmp
  QUIPPY_DEFINES =  -DGETARG_F2003 -DGETENV_F2003 -DGFORTRAN -DFORTRAN_UNDERSCORE
 -QUIPPY_CPP = gfortran -E -x f95-cpp-input
 +QUIPPY_CPP = $(FC) -E -x f95-cpp-input
