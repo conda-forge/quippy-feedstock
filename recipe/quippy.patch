@@ -1,6 +1,6 @@
-From 03e3451527852324ab5335d996c1c488434951c3 Mon Sep 17 00:00:00 2001
+From 86b019d52f51a7acd6bca80e055e7944b69aa748 Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Sun, 21 Feb 2021 15:36:25 +0100
+Date: Mon, 29 Nov 2021 15:33:30 -0700
 Subject: [PATCH] Update Makefile
 
 ---
@@ -8,15 +8,15 @@ Subject: [PATCH] Update Makefile
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/quippy/Makefile b/quippy/Makefile
-index db63c5fd8..a92d8a787 100644
+index f9fdb15f9..3240893b6 100644
 --- a/quippy/Makefile
 +++ b/quippy/Makefile
-@@ -62,7 +62,7 @@ F90WRAP_FILES = $(addsuffix .f90,$(addprefix f90wrap_,$(basename ${WRAP_SOURCES}
+@@ -113,7 +113,7 @@ quippy/_quippy${EXT_SUFFIX} ${F90WRAP_OBJS}: ${F90WRAP_FILES}
+ 		-L. -lquip_nostub ${F2PY_LINK_ARGS} --f90flags="${QUIPPY_F90FLAGS}"
+ 	mv _quippy${EXT_SUFFIX} quippy/
  
- F2PY_LINK_ARGS = $(shell ${PYTHON} -c 'import sys; print(" ".join([arg for arg in sys.argv if arg.startswith("-l") or arg.startswith("-L")]))' ${SYSLIBS} ${QUIPPY_LDFLAGS})
+-build: f90wrap quippy/_quippy${EXT_SUFFIX} ${QUIPPY_SRC_DIR}/quippy/*.py
++build: quippy/_quippy${EXT_SUFFIX} ${QUIPPY_SRC_DIR}/quippy/*.py
+ 	${QUIP_ROOT}/bin/gitversion --hash-only > VERSION
+ 	cp -r ${QUIPPY_SRC_DIR}/quippy/*.py quippy
  
--F90WRAP_PATH = $(shell ${PIP} show f90wrap | grep Location | sed -e 's/Location: //' -E -e 's|/lib(64)?/.*|/bin|')
-+F90WRAP_PATH = ${PREFIX}/bin
- 
- F90WRAP = ${F90WRAP_PATH}/f90wrap
- F2PY_F90WRAP = ${F90WRAP_PATH}/f2py-f90wrap
