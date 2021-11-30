@@ -16,7 +16,7 @@ index 93a369c61..08a216645 100644
      package_data={'quippy': package_data_files},
      cmdclass={'build_ext': my_build_ext },
 -    ext_modules=[Extension('quippy._quippy', [])],
-+    ext_modules=[Extension('quippy._quippy', [], extra_compile_args=["-fopenmp"], extra_link_args=["-fopenmp"])],
++    ext_modules=[Extension('quippy._quippy', [], extra_compile_args=["-fopenmp"], extra_link_args=["-lgomp"])],
      entry_points={
          'console_scripts': ['gap_fit=quippy.cli:gap_fit',
                              'quip=quippy.cli:quip',
