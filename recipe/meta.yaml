@@ -1,12 +1,12 @@
 {% set name = "quippy" %}
-{% set version = "0.0.1" %}
+{% set version = "0.9.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/libAtoms/QUIP/archive/public.tar.gz
+  url: https://github.com/libAtoms/QUIP/archive/v{{ version }}.tar.gz
   sha256: 8caa9d088bbf0089a3e932411f127538294324645aa93a4520f3086d28f439b1
   patches:
     - options.patch  # configure quip by patching the makefile rather than using the interactive configuration 
@@ -14,7 +14,7 @@ source:
     - quippy.patch  # use the f90wrap package from conda-forge
 
 build:
-  number: 7
+  number: 0
   skip: true  # [not linux]
 
 requirements:
