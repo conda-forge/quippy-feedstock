@@ -1,5 +1,5 @@
 {% set name = "quippy" %}
-{% set version = "0.9.13" %}
+{% set version = "0.9.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/libAtoms/QUIP/archive/v{{ version }}.tar.gz
-  sha256: 71c868adb516dd4da645320f59b52808191c032fb790a5f7d6b61ccb96493ee2
+  sha256: 587f7acce6c0538ec50f5d725db146f217fa16564e6851bc3f11e217cc048656
   patches:
     - options.patch  # configure quip by patching the makefile rather than using the interactive configuration 
     - fox.patch  # use the fox package from conda-forge
