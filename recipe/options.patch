@@ -30,9 +30,9 @@ index b871e1f00..6a3340a45 100644
  OPTIM = -O3
  
  DEFINES += -DGETARG_F2003 -DGETENV_F2003 -DGFORTRAN -DFORTRAN_UNDERSCORE
--F95FLAGS += -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC -fno-realloc-lhs
+-F90FLAGS += -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC -fno-realloc-lhs
 -F77FLAGS += -x f77-cpp-input -fno-second-underscore -fPIC -fno-realloc-lhs
-+F95FLAGS += $(FFLAGS) -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC
++F90FLAGS += $(FFLAGS) -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC
 +F77FLAGS += $(FFLAGS) -x f77-cpp-input -fno-second-underscore -fPIC
  CFLAGS += -fPIC 
 -CPLUSPLUSFLAGS += -fPIC 
