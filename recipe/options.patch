@@ -11,13 +11,12 @@ diff --git a/arch/Makefile.linux_x86_64_gfortran b/arch/Makefile.linux_x86_64_gf
 index b871e1f00..6a3340a45 100644
 --- a/arch/Makefile.linux_x86_64_gfortran
 +++ b/arch/Makefile.linux_x86_64_gfortran
-@@ -30,23 +30,19 @@
+@@ -30,22 +30,19 @@
  
  # declarations
  
 -F77 = gfortran
 -F90 = gfortran
--F95 = gfortran
 -CC = gcc
 -CPLUSPLUS = g++
 -LINKER = gfortran
