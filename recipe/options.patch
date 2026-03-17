@@ -11,13 +11,12 @@ diff --git a/arch/Makefile.linux_x86_64_gfortran b/arch/Makefile.linux_x86_64_gf
 index b871e1f00..6a3340a45 100644
 --- a/arch/Makefile.linux_x86_64_gfortran
 +++ b/arch/Makefile.linux_x86_64_gfortran
-@@ -30,23 +30,19 @@
+@@ -30,22 +30,19 @@
  
  # declarations
  
 -F77 = gfortran
 -F90 = gfortran
--F95 = gfortran
 -CC = gcc
 -CPLUSPLUS = g++
 -LINKER = gfortran
@@ -31,9 +30,9 @@ index b871e1f00..6a3340a45 100644
  OPTIM = -O3
  
  DEFINES += -DGETARG_F2003 -DGETENV_F2003 -DGFORTRAN -DFORTRAN_UNDERSCORE
--F95FLAGS += -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC -fno-realloc-lhs
+-F90FLAGS += -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC -fno-realloc-lhs
 -F77FLAGS += -x f77-cpp-input -fno-second-underscore -fPIC -fno-realloc-lhs
-+F95FLAGS += $(FFLAGS) -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC
++F90FLAGS += $(FFLAGS) -x f95-cpp-input -ffree-line-length-none -ffree-form -fno-second-underscore -fPIC
 +F77FLAGS += $(FFLAGS) -x f77-cpp-input -fno-second-underscore -fPIC
  CFLAGS += -fPIC 
 -CPLUSPLUSFLAGS += -fPIC 
